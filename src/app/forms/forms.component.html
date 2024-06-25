@@ -1,0 +1,55 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" #RegistrationForm="ngForm" autocomplete="off">
+    <h1>Conference Registration Form</h1>
+
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" name="name" id="name" [(ngModel)]="user.fullName" required autocomplete="off">
+
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" [(ngModel)]="user.email" required autocomplete="off">
+
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input type="date" name="dob" id="dob" [(ngModel)]="user.dob" required autocomplete="off">
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <select name="gender" id="gender" [(ngModel)]="user.gender" required autocomplete="off">
+        <option value="" disabled selected>Select your gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="interests">Interests</label>
+      <select name="interests" id="interests" [(ngModel)]="user.interests" autocomplete="off">
+        <option value="" disabled selected>Select your interests</option>
+        <option value="Technology">Technology</option>
+        <option value="Science">Science</option>
+        <option value="Arts">Arts</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Years of Experience</label>
+      <input type="number" name="experience" id="experience" [(ngModel)]="user.experience" required min="0" max="20">
+    </div>
+
+    <button type="submit">Register</button>
+  </form>
+
+  
+  <div class="navigation">
+    <a routerLink="/users">Go to User List</a>
+  </div>
+
+  
+</div>

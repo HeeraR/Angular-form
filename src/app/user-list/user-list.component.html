@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="filters">
+      <label for="filter-gender">Filter by Gender:</label>
+      <select id="filter-gender" (change)="filterUsers(filterGender.value, filterExperience.value)" #filterGender>
+        <option value="All">All</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+  
+      <label for="filter-experience">Filter by Experience:</label>
+      <select id="filter-experience" (change)="filterUsers(filterGender.value, filterExperience.value)" #filterExperience>
+        <option value="All">All</option>
+        <option value="0-5">0-5 years</option>
+        <option value="6-10">6-10 years</option>
+        <option value="11-15">11-15 years</option>
+        <option value="16-20">16-20 years</option>
+      </select>
+    </div>
+  
+    <table id="usersTable">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Date of Birth</th>
+          <th>Gender</th>
+          <th>Interests</th>
+          <th>Experience</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of filteredUsers; let i = index">
+          <td>{{ user.fullName }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.dob }}</td>
+          <td>{{ user.gender }}</td>
+          <td>{{ user.interests }}</td>
+          <td>{{ user.experience }}</td>
+          <td><button (click)="deleteUser(i)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
