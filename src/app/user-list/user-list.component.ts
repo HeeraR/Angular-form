@@ -39,4 +39,9 @@ export class UserListComponent implements OnInit {
       this.filteredUsers = this.filteredUsers.filter(user => user.experience >= min && user.experience <= max);
     }
   }
+
+  onLogin(): void {
+    
+  }
 }
+

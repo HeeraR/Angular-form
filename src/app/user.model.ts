@@ -4,6 +4,7 @@ export interface User {
   email: string;
   dob?: string;
   gender?: string;
+  password: string;
   interests?: string[];
   experience: number;
 }

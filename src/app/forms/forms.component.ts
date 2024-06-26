@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user.model';
 
@@ -11,10 +10,11 @@ export class FormsComponent implements OnInit {
   user: User = {
     fullName: '',
     email: '',
+    password: '',
     dob: '',
     gender: '',
     interests: [],
-    experience: 0  
+    experience: 0
   };
   users: User[] = [];
   filteredUsers: User[] = [];
@@ -42,6 +42,12 @@ export class FormsComponent implements OnInit {
     if (!emailPattern.test(this.user.email)) {
       alert('Please enter a valid email address.');
       return;
+    }
+
+    if (this.user.dob) {
+      // Format the date to dd-mm-yyyy
+      const [year, month, day] = this.user.dob.split('-');
+      this.user.dob = `${day}-${month}-${year}`;
     }
 
     this.users.push({ ...this.user });
@@ -74,10 +80,11 @@ export class FormsComponent implements OnInit {
     this.user = {
       fullName: '',
       email: '',
+      password: '',
       dob: '',
       gender: '',
       interests: [],
-      experience: 0  
+      experience: 0
     };
   }
 }

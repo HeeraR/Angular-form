@@ -1,10 +1,8 @@
-/* Add background color to the page */
 body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
   }
   
-  /* Center the container */
   .container {
     width: 80%;
     margin: 50px auto; 
@@ -14,7 +12,6 @@ body {
     border-radius: 8px;
   }
   
-  /* Style the table */
   table {
     width: 100%;
     border-collapse: collapse;
@@ -35,7 +32,6 @@ body {
     background-color: #f9f9f9;
   }
   
-  /* Style buttons */
   button {
     padding: 8px 12px;
     background-color: #da710e;
@@ -49,7 +45,7 @@ body {
     background-color: #45a049;
   }
   
-  /* Style the filters */
+  
   .filters {
     display: flex;
     justify-content: space-between;
@@ -59,4 +55,43 @@ body {
   .filters label, .filters select {
     margin-right: 10px;
   }
+  .navigation{
+    text-decoration-line: none;
+  }
   
+  .navigation a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+}
+.left-align {
+  float: left;
+}
+
+.right-align {
+  float: right;
+}
+
+.navigation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-container {
+  display: inline-block;
+}
+
+.nav-button {
+  display: inline-block;
+  font-weight: bold;
+  color: white; 
+  background-color: #007bff; 
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+.nav-button:hover {
+  background-color: #0056b3; 
+}
