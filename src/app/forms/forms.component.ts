@@ -45,7 +45,6 @@ export class FormsComponent implements OnInit {
     }
 
     if (this.user.dob) {
-      // Format the date to dd-mm-yyyy
       const [year, month, day] = this.user.dob.split('-');
       this.user.dob = `${day}-${month}-${year}`;
     }

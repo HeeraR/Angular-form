@@ -22,7 +22,7 @@ export class LoginComponent {
       const user = users.find(user => user.email === this.loginData.email && user.password === this.loginData.password);
       if (user) {
         alert('Login successful!');
-        this.router.navigate(['/users']);
+        this.router.navigate(['/users']);  
       } else {
         alert('Invalid email or password.');
       }
