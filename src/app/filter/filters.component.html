@@ -1,19 +1,18 @@
 <div class="filter-container">
-    <label for="gender">Gender:</label>
-    <select id="gender" [(ngModel)]="gender">
-      <option value="All">All</option>
-      <option value="Male">Male</option>
-      <option value="Female">Female</option>
-    </select>
-  
-    <label for="experience">Experience Range:</label>
-    <select id="experience" [(ngModel)]="experienceRange">
-      <option value="All">All</option>
-      <option value="0-1">0-1 years</option>
-      <option value="1-3">1-3 years</option>
-      <option value="3+">3+ years</option>
-    </select>
-  
-    <button (click)="applyFilter()">Apply Filter</button>
-  </div>
-  
+  <label for="gender">Gender:</label>
+  <select id="gender" [(ngModel)]="gender">
+    <option value="All">All</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <label for="experience">Experience Range:</label>
+  <select id="experience" [(ngModel)]="experienceRange">
+    <option value="All">All</option>
+    <option value="0-1">0-1 years</option>
+    <option value="1-3">1-3 years</option>
+    <option value="3+">3+ years</option>
+  </select>
+
+  <button (click)="applyFilter()">Apply Filter</button>
+</div>
