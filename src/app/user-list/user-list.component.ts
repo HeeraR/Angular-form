@@ -27,11 +27,10 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  
   filterUsers(gender: string, experienceRange: string): void {
     this.filteredUsers = [...this.users];
   }
-
+ 
   onLogin(): void {
   }
 }

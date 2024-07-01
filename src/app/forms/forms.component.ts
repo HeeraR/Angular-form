@@ -62,19 +62,6 @@ export class FormsComponent implements OnInit {
     this.filteredUsers = [...this.users];
   }
 
-  filterUsers(gender: string, experienceRange: string): void {
-    this.filteredUsers = this.users;
-
-    if (gender !== 'All') {
-      this.filteredUsers = this.filteredUsers.filter(user => user.gender === gender);
-    }
-
-    if (experienceRange !== 'All') {
-      const [min, max] = experienceRange.split('-').map(Number);
-      this.filteredUsers = this.filteredUsers.filter(user => user.experience >= min && user.experience <= max);
-    }
-  }
-
   resetForm(): void {
     this.user = {
       fullName: '',
